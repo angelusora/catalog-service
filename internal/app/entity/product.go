@@ -34,7 +34,7 @@ type RequestProductCreate struct {
 type RequestProductUpdate struct {
 	Name         string    `json:"name"           binding:"omitempty,min=2,max=255"`
 	Description  *string   `json:"description"    binding:"omitempty,max=1000"`
-	Price        int64     `json:"price"          binding:"gte=0"`
+	Price        int64     `json:"price"          binding:"gt=0"`
 	CategoryGUID uuid.UUID `json:"category_guid"`
 }
 
